@@ -1,0 +1,16 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="test in tests" type="item-text-wrap" href="#/tab/dash/{{test.sys.id}}" ng-click="showSpinner()">
+        <img ng-src="{{test.fields.photo.fields.file.url}}">
+        <h2>{{test.fields.title}}</h2>
+        <p>{{test.fields.description}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(test)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
